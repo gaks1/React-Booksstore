@@ -1,7 +1,6 @@
 const Books = () => (
   <div>
-    <h1>Categories</h1>
-
+    <h1>books</h1>
   </div>
 );
 
