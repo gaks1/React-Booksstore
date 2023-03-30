@@ -1,0 +1,33 @@
+nav {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navUl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.active {
+  color: blue;
+  text-decoration: none;
+}
+
+.navTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(0, 153, 255);
+}
