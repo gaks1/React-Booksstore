@@ -15,7 +15,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -44,10 +43,6 @@
 - Adding a book 
 - Removing a book
 - Hitting an API
-
-## Live Demo
-
-- comming soon
 
 ## Getting Started
 
