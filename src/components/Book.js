@@ -9,10 +9,9 @@ const Books = () => {
     e.preventDefault();
     const title = document.getElementById('titleInput').value;
     const author = document.getElementById('authorInput').value;
-    const category = 'gtyu';
     const id = Math.random().toString(36).substr(2, 9);
     const book = {
-      item_id: id, title, author, category,
+      item_id: id, title, author,
     };
     dispatch(addBook(book));
   };
