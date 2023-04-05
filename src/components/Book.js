@@ -1,20 +1,30 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { addBook, removeBook } from '../redux/books/booksSlice';
+import { useEffect } from 'react';
+import { addBook, fetchBooks, removeBook } from '../redux/books/booksSlice';
 
 const Books = () => {
-  const { books } = useSelector((state) => state.books);
+  const { books, isLoading } = useSelector((state) => state.books);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const title = document.getElementById('titleInput').value;
     const author = document.getElementById('authorInput').value;
+    const category = 'non-fiction';
     const id = Math.random().toString(36).substr(2, 9);
     const book = {
-      item_id: id, title, author,
+      item_id: id, title, author, category,
     };
     dispatch(addBook(book));
   };
+
+  if (isLoading) {
+    return <h2>Loading...</h2>;
+  }
 
   return (
     <div>
