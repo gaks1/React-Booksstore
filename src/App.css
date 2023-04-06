@@ -80,7 +80,6 @@ form {
   border-radius: 4px;
   background-color: var(--azure);
   border: none;
-
 }
 
 .Lesson-Panel {
@@ -97,14 +96,13 @@ form {
   line-height: normal;
   letter-spacing: -0.15px;
   color: var(--very-light-pink);
-
 }
 
 .Title {
   width: 10.875rem;
   height: 1.5rem;
   margin: 1.813rem 32.75rem 1.188rem 0;
-  font-family: Montserrat;
+  font-family: var(--Montserrat);
   font-size: 1.25rem;
   font-weight: bold;
   font-stretch: normal;
@@ -214,18 +212,19 @@ div[role='progressbar'] {
   --bg: #def;
   --value: 64;
   --pgPercentage: var(--value);
+
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+  background:
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
     conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0;
   color: var(--fg);
 }
-
 
 .progress-text {
   display: flex;
@@ -253,7 +252,6 @@ div[role='progressbar'] {
   background-color: var(--white-two);
   color: #121212;
   opacity: 0.5;
-
 }
 
 .ul3 {
@@ -327,12 +325,10 @@ svg:not(:host).svg-inline--fa {
 }
 
 .navHeader {
-
   background-color: white;
   padding: 10px;
   display: flex;
   align-items: center;
-
 }
 
 .Oval {
