@@ -22,6 +22,21 @@
   --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
 }
 
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--Montserrat);
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  background-color: var(--z);
+}
+
 nav {
   background-color: white;
   padding: 10px;
@@ -357,8 +372,15 @@ svg:not(:host).svg-inline--fa {
 .form-container {
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 10%;
 }
 
 label {
   width: 40%;
+}
+
+.books{
+  margin: 0 auto;
+  width: 90%;
+  padding: 0;
 }

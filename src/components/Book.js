@@ -29,7 +29,7 @@ const Books = () => {
 
   return (
     <div>
-      <ul>
+      <ul className="books">
         {
           books.map((book) => (
             <li key={book.item_id}>
