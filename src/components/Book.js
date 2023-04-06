@@ -27,33 +27,81 @@ const Books = () => {
   }
 
   return (
-    <div>
-      <ul>
-        {
-          books.map((book) => (
-            <li key={book.item_id}>
-              <span>{book.title}</span>
-              <span>{book.author}</span>
-              <span>{book.category}</span>
-              <button type="button" onClick={() => dispatch(removeBook(book.item_id))}>Remove Book</button>
+    <div className="Books">
+    <div className="Lesson-Panel22222">
+      <div className="book-Card">
+        <div className="book-informations">
+          <p className="School-of">{book.category}</p>
+            <p className="Title11">{book.title}</p>
+            <p className="Author">{book.author}</p>
+          <ul className="ul3">
+            <li>
+              <button className="Comments" type="button">Comments</button>
             </li>
-          ))
-        }
-      </ul>
-      <h2>Add New Book</h2>
-      <form>
-        <label htmlFor="titleInput">
-          Title:
-          <input type="text" id="titleInput" name="title" />
-        </label>
-        <br />
-        <label htmlFor="authorInput">
-          Author:
-          <input type="text" id="authorInput" name="author" />
-        </label>
-        <br />
-        <button type="submit" onClick={(e) => handleSubmit(e)}>Add Book</button>
-      </form>
+            <div className="Line-2"></div>
+            <li>
+              <button className="Remove" type="button">Remove</button>
+            </li>
+            <div className="Line-2"></div>
+            <li>
+              <button className="Edit" type="button">Edit</button>
+            </li>
+          </ul>
+        </div>
+        <div className="book-progress">
+          <div
+            role="progressbar"
+            aria-valuenow="65"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+          <div className="progress-text">
+            <p className="Percent-Complete">
+              23<span>%</span>
+            </p>
+            <p className="Completed">Completed</p>
+          </div>
+        </div>
+        <div className="Line-3"></div>
+        <div className="chapters">
+          <p className="Current-Chapter">CURRENT CHAPTER</p>
+          <p className="Current-Lesson">Chapter 12</p>
+          <button type="button" className="Update-progress">
+            UPDATE PROGRESS
+          </button>
+        </div>
+      </div>
+    </div>
+      <div className="Line"></div>
+      <div className="form-container">
+        <h2 className="Title">ADD NEW BOOK</h2>
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <label htmlFor="titleInput">
+            <input
+              className="Lesson-Panel"
+              type="text"
+              id="titleInput"
+              name="title"
+              placeholder="Title"
+            />
+          </label>
+          <br />
+          <label htmlFor="authorInput">
+            <input
+              className="Lesson-Panel"
+              type="text"
+              id="authorInput"
+              name="author"
+              placeholder="Author"
+            />
+          </label>
+          <br />
+          <button type="submit" className="ADD-BOOK">
+            Add Book
+          </button>
+        </form>
+      </div>
+
     </div>
   );
 };
