@@ -40,21 +40,34 @@ li {
   list-style: none;
 }
 
-a {
-  color: black;
+nav a {
   text-decoration: none;
+  font-family: var(--Montserrat);
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  opacity: 0.5;
   margin: 0 10px;
 }
 
 .active {
-  color: blue;
-  text-decoration: none;
+  opacity: 1;
 }
 
 .navTitle {
-  font-size: 20px;
+  padding-left: 3rem;
+  font-family: var(--Montserrat);
+  font-size: 1.875rem;
   font-weight: bold;
-  color: rgb(0, 153, 255);
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--azure);
 }
 
 form {
