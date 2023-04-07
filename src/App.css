@@ -1,6 +1,18 @@
 :root {
   --Montserrat: 'Montserrat', sans-serif;
   --azure: #0290ff;
+  --white: #e8e8e8;
+}
+
+:root {
+  --Montserrat: 'Montserrat', sans-serif;
+  --RobotoSlab: 'Roboto Slab', serif;
+  --azure: #0290ff;
+  --z: #fafafa;
+  --white: #e8e8e8;
+  --white-two: #fff;
+  --cool-blue: #4386bf;
+  --very-light-pink: #c4c4c4;
 }
 
 nav {
@@ -79,4 +91,76 @@ svg:not(:host).svg-inline--fa {
   height: 1em;
   overflow: visible;
   vertical-align: -0.125em;
+}
+
+.Line {
+  width: 90%;
+  border: solid 1px var(--white);
+  margin: 0 auto;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.form-div {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 10%;
+}
+
+.Title {
+  width: 10.875rem;
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-family: var(--Montserrat);
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+label {
+  width: 40%;
+  height: 2.813rem;
+}
+
+.Lesson-Panel {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  border-radius: 2px;
+  border: solid 1px var(--white);
+  background-color: var(--white-two);
+  font-size: 1rem;
+  font-family: var(--Montserrat);
+  font-weight: bolder;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: var(--very-light-pink);
+}
+
+.ADD-BOOK {
+  width: 8.938rem;
+  height: 3.2rem;
+  font-family: var(--RobotoSlab);
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white-two);
+  border-width: 2px;
+  border-radius: 4px;
+  background-color: var(--azure);
+  border: none;
 }
