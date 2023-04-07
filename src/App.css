@@ -139,7 +139,7 @@ form {
 }
 
 label {
-  width: 40%;
+  width: 35%;
   height: 2.813rem;
 }
 
@@ -160,7 +160,7 @@ label {
 }
 
 .ADD-BOOK {
-  width: 8.938rem;
+  width: 13.938rem;
   height: 3.2rem;
   font-family: var(--RobotoSlab);
   font-size: 0.813rem;
@@ -185,7 +185,6 @@ label {
 
 .panel {
   margin: 2rem auto;
-  width: 85%;
   padding: 2rem 4rem 1.625rem;
   border-radius: 4px;
   border: solid 1px var(--white);
@@ -281,7 +280,7 @@ label {
   display: grid;
   place-items: center;
   background:
-    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    radial-gradient(closest-side, white 88%, transparent 0 99.9%, white 0),
     conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0;
