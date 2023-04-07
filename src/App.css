@@ -10,8 +10,8 @@
   --cool-blue: #4386bf;
   --light-grey: #c4c4c4;
   --size: 6rem;
-  --fg: #4795e2;
-  --bg: #f5f5f5;
+  --fg: #379cf6;
+  --bg: #c4c4c4;
   --value: 64;
   --pgPercentage: var(--value);
 }
@@ -309,7 +309,6 @@ label {
 .Completed {
   margin: 0;
   border-radius: 4px;
-  border: solid 1px var(--white);
   background-color: var(--white-two);
   color: #121212;
   opacity: 0.5;
