@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { addBook, fetchBooks, removeBook } from '../redux/books/booksSlice';
+import { addBook, fetchBooks } from '../redux/books/booksSlice';
+import Book from './Book';
 
 const Books = () => {
   const { books, isLoading } = useSelector((state) => state.books);
@@ -28,14 +29,11 @@ const Books = () => {
 
   return (
     <div>
-      <ul>
+      <ul className="books">
         {
           books.map((book) => (
             <li key={book.item_id}>
-              <span>{book.title}</span>
-              <span>{book.author}</span>
-              <span>{book.category}</span>
-              <button type="button" onClick={() => dispatch(removeBook(book.item_id))}>Remove Book</button>
+              <Book item={book} />
             </li>
           ))
         }
