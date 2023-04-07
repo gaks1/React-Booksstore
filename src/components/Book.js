@@ -1,61 +1,67 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { addBook, fetchBooks, removeBook } from '../redux/books/booksSlice';
+import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+import { removeBook } from '../redux/books/booksSlice';
 
-const Books = () => {
-  const { books, isLoading } = useSelector((state) => state.books);
+const Book = ({ item }) => {
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchBooks());
-  }, [dispatch]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const title = document.getElementById('titleInput').value;
-    const author = document.getElementById('authorInput').value;
-    const category = 'non-fiction';
-    const id = Math.random().toString(36).substr(2, 9);
-    const book = {
-      item_id: id, title, author, category,
-    };
-    dispatch(addBook(book));
-  };
-
-  if (isLoading) {
-    return <h2>Loading...</h2>;
-  }
-
   return (
-    <div>
-      <ul>
-        {
-          books.map((book) => (
-            <li key={book.item_id}>
-              <span>{book.title}</span>
-              <span>{book.author}</span>
-              <span>{book.category}</span>
-              <button type="button" onClick={() => dispatch(removeBook(book.item_id))}>Remove Book</button>
-            </li>
-          ))
-        }
-      </ul>
-      <h2>Add New Book</h2>
-      <form>
-        <label htmlFor="titleInput">
-          Title:
-          <input type="text" id="titleInput" name="title" />
-        </label>
-        <br />
-        <label htmlFor="authorInput">
-          Author:
-          <input type="text" id="authorInput" name="author" />
-        </label>
-        <br />
-        <button type="submit" onClick={(e) => handleSubmit(e)}>Add Book</button>
-      </form>
-    </div>
+    <li>
+      <div className="panel">
+        <div className="book-Card">
+          <div className="book-info">
+            <p className="School-of">{item.category}</p>
+            <p className="Book-Title">{item.title}</p>
+            <p className="Book-Author">{item.author}</p>
+            <ul className="ul3">
+              <li>
+                <button className="Comments" type="button">Comments</button>
+              </li>
+              <div className="Line-2" />
+              <li>
+                <button type="button" className="Remove" onClick={() => dispatch(removeBook(item.item_id))}>Remove</button>
+              </li>
+              <div className="Line-2" />
+              <li>
+                <button className="Edit" type="button">Edit</button>
+              </li>
+            </ul>
+          </div>
+          <div className="progress">
+            <div
+              className="progress-bar"
+              aria-valuenow="65"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            />
+            <div className="progress-text">
+              <p className="Percent">
+                57
+                <span>%</span>
+              </p>
+              <p className="Completed">Completed</p>
+            </div>
+          </div>
+          <div className="Line-3" />
+          <div>
+            <p className="Current-Chapter">CURRENT CHAPTER</p>
+            <p className="Current-Lesson">Chapter 85</p>
+            <button type="button" className="Update-progress">
+              UPDATE PROGRESS
+            </button>
+          </div>
+        </div>
+      </div>
+    </li>
   );
 };
 
-export default Books;
+Book.propTypes = {
+  item: PropTypes.shape({
+    category: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+export default Book;
