@@ -1,5 +1,5 @@
-/* eslint-disable */
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/booksSlice';
 
 const Book = ({ item }) => {
@@ -26,16 +26,16 @@ const Book = ({ item }) => {
               </li>
             </ul>
           </div>
-          <div className="book-progress">
+          <div className="progress">
             <div
-              className="progressbar"
+              className="progress-bar"
               aria-valuenow="65"
               aria-valuemin="0"
               aria-valuemax="100"
             />
             <div className="progress-text">
-              <p className="Percent-Complete">
-                23
+              <p className="Percent">
+                57
                 <span>%</span>
               </p>
               <p className="Completed">Completed</p>
@@ -44,7 +44,7 @@ const Book = ({ item }) => {
           <div className="Line-3" />
           <div>
             <p className="Current-Chapter">CURRENT CHAPTER</p>
-            <p className="Current-Lesson">Chapter 12</p>
+            <p className="Current-Lesson">Chapter 85</p>
             <button type="button" className="Update-progress">
               UPDATE PROGRESS
             </button>
@@ -53,6 +53,15 @@ const Book = ({ item }) => {
       </div>
     </li>
   );
+};
+
+Book.propTypes = {
+  item: PropTypes.shape({
+    category: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Book;

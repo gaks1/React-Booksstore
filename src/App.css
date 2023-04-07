@@ -6,12 +6,24 @@
   --white: #e8e8e8;
   --white-two: #fff;
   --cool-blue: #4386bf;
-  --very-light-pink: #c4c4c4;
+  --light-grey: #c4c4c4;
   --size: 6rem;
-  --fg: #369;
-  --bg: #def;
+  --fg: #4795e2;
+  --bg: #f5f5f5;
   --value: 64;
   --pgPercentage: var(--value);
+}
+
+body {
+  font-family: var(--Montserrat);
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  background-color: var(--z);
 }
 
 nav {
@@ -49,6 +61,7 @@ nav a {
 .navHeader {
   background-color: white;
   padding: 10px;
+  padding-left: 5%;
   display: flex;
   align-items: center;
 }
@@ -143,7 +156,7 @@ label {
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.15px;
-  color: var(--very-light-pink);
+  color: var(--light-grey);
 }
 
 .ADD-BOOK {
@@ -214,7 +227,7 @@ label {
   font-family: var(--RobotoSlab);
 }
 
-.Book-Author{
+.Book-Author {
   margin: 0;
   font-family: var(--RobotoSlab);
   font-size: 1.2rem;
@@ -246,6 +259,7 @@ label {
   color: var(--cool-blue);
   border: none;
   background-color: transparent;
+  padding-left: 0;
 }
 
 .Line-2 {
@@ -254,13 +268,13 @@ label {
   border: solid 1px var(--white);
 }
 
-.book-progress {
+.progress {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.progressbar {
+.progress-bar {
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
@@ -281,7 +295,7 @@ label {
   align-items: center;
 }
 
-.Percent-Complete {
+.Percent {
   font-family: var(--Montserrat);
   margin: 0;
   font-size: 2rem;
